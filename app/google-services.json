@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "914707288449",
+    "firebase_url": "https://virtuallytrue-b3fab.firebaseio.com",
+    "project_id": "virtuallytrue-b3fab",
+    "storage_bucket": "virtuallytrue-b3fab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914707288449:android:f79b27f045407937",
+        "android_client_info": {
+          "package_name": "com.example.virtuallytrue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914707288449-dmfm6mf9j4s2ec04jvdnbhlo36t4u2mm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.virtuallytrue",
+            "certificate_hash": "b2d476e340b9adcca0fe2097a1e2975fbd2cc60e"
+          }
+        },
+        {
+          "client_id": "914707288449-87e4007f5csd236c6rpc34tnveb0q5ts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPNCHLwiQpTcExMyeXUJctkJj6tBFFd0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914707288449-87e4007f5csd236c6rpc34tnveb0q5ts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
