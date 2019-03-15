@@ -31,13 +31,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button Loginbutton;
-    private EditText Useremail, UserPassword;
     private FirebaseAuth mAuth;
     private ProgressDialog loadingbar;
-    private Button loginButton;
-    //private CallbackManager mCallbackManager;
-    //public static final String TAG = "FACELOG";
     private GoogleApiClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 9001;
     private ImageView google_signin;
@@ -50,19 +45,8 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         google_signin = findViewById(R.id.google);
-        Useremail = findViewById(R.id.login_email);
-        UserPassword = findViewById(R.id.login_password);
-        Loginbutton = (Button) findViewById(R.id.login_button);
         loadingbar = new ProgressDialog(this);
 
-
-        Loginbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                allowingusertologin();
-//                sendusertomainactivity();
-            }
-        });
 
 // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -147,40 +131,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    private void allowingusertologin() {
-        String email = Useremail.getText().toString();
-        String password = UserPassword.getText().toString();
-
-        if (TextUtils.isEmpty(email)) {
-            Toast.makeText(this, "Please type your email", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Please type your password", Toast.LENGTH_SHORT).show();
-        } else {
-            loadingbar.setTitle("Login");
-            loadingbar.setMessage("Please wait while we are processing your request...");
-            loadingbar.setCanceledOnTouchOutside(true);
-            loadingbar.show();
-
-            mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                sendusertomainactivity();
-                                Toast.makeText(LoginActivity.this, "You are Logged in Successfully.", Toast.LENGTH_SHORT).show();
-                            } else {
-                                String message = task.getException().getMessage();
-                                Toast.makeText(LoginActivity.this, "Error occured:" + message, Toast.LENGTH_SHORT).show();
-                            }
-                            loadingbar.dismiss();
-                        }
-                    });
-        }
-    }
-
-
     private void sendusertoregisteractivity() {
     }
+
     private void sendusertomainactivity() {
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
         mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

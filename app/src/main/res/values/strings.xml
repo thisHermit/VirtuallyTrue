@@ -3,4 +3,37 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+    <string name="description">
+        <![CDATA[
+            <h1> <u>Virtually True</u> </h1></center><br><br>
+<center><h2> Backtrack </h2></center>
+<center><p>We give the students a knight on the chessboard and spread some coins across the board ....<br>
+They have to move their peice in L shape and get as many coins as tgey can in given time provided they reach their initial position in tym</p></center>
+<center><h2> Agility Check </h2></center>
+<center><p>Team of two members<br>
+One person throws a ping pong ball and at tge other end a guy with flap dustbin opens tge flap using leg at right tym to take ball into the bin.
+</p></center>
+<center><h2> Recurr The Relation </h2></center>
+<center><p>The idea of game is...<br>
+Having four or five functions on different part of table( written as code )..<br>
+Some having function.. some random value( stack of paper having different value) ... <br>
+It is like playing with many recursion in a cup.</p></center>
+<center><h2> Believe Your Senses </h2></center>
+<center><p>This game is based on sound.... <br>
+Different sound means different things... <br>
+Like turn left..turn right... Colors.. red.. Blue... Like that...<br>
+We make a string of sounds.. (having previous meaning).... <br>
+They have to tell from previous location where they are and what color is there shirt and what direction is their previous location<br>
+.It basically depend on audio.<br>
+</p></center>
+<center><h2> How it Resembles </h2></center>
+<center><p>We will provide many objects in a loot which would relate to specific entities in CSE world and participants need to pick objects under the topic alloted...<br>
+
+Ex: A pack of shuttle cork represents a Stack as it can be taken out and entered from top
+</p></center>
+
+        ]]>
+    </string>
 </resources>
