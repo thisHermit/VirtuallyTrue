@@ -1,4 +1,4 @@
-package com.example.virtuallytrue;
+package com.basharjaankhan.virtuallytrue;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -73,7 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Virtually True");
+        try {
+            getSupportActionBar().setTitle("Virtually True");
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
         drawerLayout = findViewById(R.id.drawable_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, R.string.drawer_open, R.string.drawer_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -115,19 +118,15 @@ public class MainActivity extends AppCompatActivity {
     private void UserMenuSelector(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_profile:
-                Toast.makeText(this, "Profile pressed", Toast.LENGTH_SHORT).show();
                 SendUserToProfileActivity();
                 break;
             case R.id.nav_admin:
-                Toast.makeText(this, "Admin pressed", Toast.LENGTH_SHORT).show();
                 SendUserToAdminActivity();
                 break;
             case R.id.nav_about:
-                Toast.makeText(this, "About pressed", Toast.LENGTH_SHORT).show();
                 SendUserToAboutActivity();
                 break;
             case R.id.nav_developer:
-                Toast.makeText(this, "Developer pressed", Toast.LENGTH_SHORT).show();
                 SendUserToDeveloperActivity();
                 break;
             case R.id.nav_logout:
@@ -163,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void SendUserToProfileActivity() {
-        Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
-        startActivity(profileIntent);
+        Intent setupIntent = new Intent(MainActivity.this, SetupActivity.class);
+        startActivity(setupIntent);
 
     }
 

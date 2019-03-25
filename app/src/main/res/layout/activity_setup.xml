@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupActivity"
+    android:padding="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setup_logo"
+        android:layout_width="200dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center"
+        android:src="@drawable/csea_logo"/>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/setup_fullname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:hint="Full Name">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/setup_fullname"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/inputs"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:padding="14dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/setup_collegename_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="College Name">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/setup_collegename"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:layout_below="@+id/setup_fullname"
+            android:background="@drawable/inputs"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:padding="14dp" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/setup_information_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/inputs"
+        android:padding="14dp"
+        android:text="Save"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="SAVE" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.virtuallytrue;
+package com.basharjaankhan.virtuallytrue;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

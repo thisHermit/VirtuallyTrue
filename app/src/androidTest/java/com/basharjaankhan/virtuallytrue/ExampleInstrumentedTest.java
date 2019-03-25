@@ -1,4 +1,4 @@
-package com.example.virtuallytrue;
+package com.basharjaankhan.virtuallytrue;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
